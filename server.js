@@ -2,13 +2,12 @@
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+const app = express();
 
 //Require Schemas Here
 
-// Create Instance of Express
-const app = express();
-const port = process.env.PORT || 3000; // Sets an initial port. We'll use this later in our listener
 
+/*
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
@@ -28,10 +27,36 @@ db.on('error', function (err) {
 
 db.once('open', function () {
   console.log('Mongoose connection successful.');
+*/
+//Add Body Parser Middlewarß
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+
+//Use public directory
+app.use(express.static('public'));
+
+//Mongoose - Configure and connect to the database 
+mongoose.connect('mongodb://localhost/nytSeachDB');
+const db = mongoose.connection;
+
+//Mongoose - show errors
+db.on("error", function(error){
+	console.log("Mongoose error: ", error);
+});
+
+//Mongoose - success message upon database connection
+db.once("open", function(){
+	console.log("The 'goose is go!")
+});
+
+
 });
 
 
 // Listener
+const port = process.env.PORT || 3000; 
+
 app.listen(port, function() {
   console.log("App listening on PORT: " + port);
 });
