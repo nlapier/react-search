@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 import React , {Router} from "react-router";
 
 // Grabs the Routes
-import routes "./config/routes";
+import routes from "./config/routes";
 
 // Renders the contents according to the route page. 
 ReactDOM.render(
