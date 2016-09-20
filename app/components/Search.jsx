@@ -4,30 +4,34 @@
 
 import React from "react";
 
-var Search = React.createClass({
+const Search = React.createClass({
 
 	render: function(){
 		return(
-			<form>
+			<div>
+				<h2 className="text-center">Search New Articles</h2>
 
-				<div>
-					<label for="searchTerm">Search Term</label>
-					<input type="text" className="form-control" id="searchTerm" />
-				</div>
+				<form>
 
-				<div>
-					<label for="startYear">Start Year</label>
-					<input type="text" className="form-control" id="startYear" />
-				</div>
+					<div>
+						<label for="searchTerm">Search Term</label>
+						<input type="text" className="form-control" id="searchTerm" />
+					</div>
 
-				<div>
-					<label for="endYear">End Year</label>
-					<input type="text" className="form-control" id="endYear" />
-				</div>
+					<div>
+						<label for="startYear">Start Year</label>
+						<input type="text" className="form-control" id="startYear" />
+					</div>
 
-				<button type="submit" className="btn btn-default">Search</button>
+					<div>
+						<label for="endYear">End Year</label>
+						<input type="text" className="form-control" id="endYear" />
+					</div>
 
-			</form>
+					<button type="submit" className="btn btn-default">Search</button>
+
+				</form>
+			</div>
 		)
 	}
 });

@@ -3,6 +3,8 @@ import React from "react";
 
 //Internal Dependencies
 import Search from "./Search.jsx";
+import Results from "./Results.jsx";
+import Saved from "./Saved.jsx";
 
 
 const Main = React.createClass({
