@@ -19831,6 +19831,14 @@
 
 	var _Search2 = _interopRequireDefault(_Search);
 
+	var _Results = __webpack_require__(225);
+
+	var _Results2 = _interopRequireDefault(_Results);
+
+	var _Saved = __webpack_require__(226);
+
+	var _Saved2 = _interopRequireDefault(_Saved);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// External Dependencies
@@ -25559,42 +25567,51 @@
 
 		render: function render() {
 			return _react2.default.createElement(
-				"form",
+				"div",
 				null,
 				_react2.default.createElement(
-					"div",
-					null,
-					_react2.default.createElement(
-						"label",
-						{ "for": "searchTerm" },
-						"Search Term"
-					),
-					_react2.default.createElement("input", { type: "text", className: "form-control", id: "searchTerm" })
+					"h2",
+					{ className: "text-center" },
+					"Search New Articles"
 				),
 				_react2.default.createElement(
-					"div",
+					"form",
 					null,
 					_react2.default.createElement(
-						"label",
-						{ "for": "startYear" },
-						"Start Year"
+						"div",
+						null,
+						_react2.default.createElement(
+							"label",
+							{ "for": "searchTerm" },
+							"Search Term"
+						),
+						_react2.default.createElement("input", { type: "text", className: "form-control", id: "searchTerm" })
 					),
-					_react2.default.createElement("input", { type: "text", className: "form-control", id: "startYear" })
-				),
-				_react2.default.createElement(
-					"div",
-					null,
 					_react2.default.createElement(
-						"label",
-						{ "for": "endYear" },
-						"End Year"
+						"div",
+						null,
+						_react2.default.createElement(
+							"label",
+							{ "for": "startYear" },
+							"Start Year"
+						),
+						_react2.default.createElement("input", { type: "text", className: "form-control", id: "startYear" })
 					),
-					_react2.default.createElement("input", { type: "text", className: "form-control", id: "endYear" })
-				),
-				_react2.default.createElement(
-					"button",
-					{ type: "submit", className: "btn btn-default" },
-					"Search"
+					_react2.default.createElement(
+						"div",
+						null,
+						_react2.default.createElement(
+							"label",
+							{ "for": "endYear" },
+							"End Year"
+						),
+						_react2.default.createElement("input", { type: "text", className: "form-control", id: "endYear" })
+					),
+					_react2.default.createElement(
+						"button",
+						{ type: "submit", className: "btn btn-default" },
+						"Search"
+					)
 				)
 			);
 		}
@@ -25603,6 +25620,82 @@
 	    */
 
 	module.exports = Search;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Results = _react2.default.createClass({
+		displayName: "Results",
+
+
+		render: function render() {
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement(
+					"h2",
+					{ className: "text-center" },
+					"Results"
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "resultArticlesDiv" },
+					this.props.results
+				)
+			);
+		}
+	}); /*
+	    
+	    */
+
+	module.exports = Results;
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Saved = _react2.default.createClass({
+		displayName: "Saved",
+
+
+		render: function render() {
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement(
+					"h2",
+					{ className: "text-center" },
+					"Saved Articles"
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "resultArticlesDiv" },
+					this.props.saved
+				)
+			);
+		}
+	}); /*
+	    
+	    */
+
+	module.exports = Saved;
 
 /***/ }
 /******/ ]);
