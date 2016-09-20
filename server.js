@@ -1,7 +1,7 @@
 // Include Server Dependencies
-import express from "express";
-import mongoose from "mongoose";
-import bodyParser from "body-parser";
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const express = require('express');
 const app = express();
 
 //Require Schemas Here
@@ -28,7 +28,8 @@ db.on('error', function (err) {
 db.once('open', function () {
   console.log('Mongoose connection successful.');
 */
-//Add Body Parser Middlewarß
+
+//Add Body Parser Middleware
 app.use(bodyParser.urlencoded({
   extended: false
 }));
@@ -38,7 +39,7 @@ app.use(express.static('public'));
 
 //Mongoose - Configure and connect to the database 
 mongoose.connect('mongodb://localhost/nytSeachDB');
-const db = mongoose.connection;
+var db = mongoose.connection;
 
 //Mongoose - show errors
 db.on("error", function(error){
@@ -50,12 +51,8 @@ db.once("open", function(){
 	console.log("The 'goose is go!")
 });
 
-
-});
-
-
 // Listener
-const port = process.env.PORT || 3000; 
+var port = process.env.PORT || 3000; 
 
 app.listen(port, function() {
   console.log("App listening on PORT: " + port);

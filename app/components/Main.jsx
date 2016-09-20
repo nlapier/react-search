@@ -4,6 +4,10 @@ import React from "react";
 
 const Main = React.createClass({
 
+	// componentDidMount: function(){
+	// 	console.log("Main mounted")
+	// },
+
 	// Here we render the function
 	render: function(){
 
@@ -11,6 +15,7 @@ const Main = React.createClass({
 
 			<div className="container">
 
+				<h1>TEST</h1>
 
 			</div>
 		)
