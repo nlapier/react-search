@@ -12,6 +12,6 @@ import Main from "./components/Main.jsx"
 
 // Renders the contents according to the route page. 
 ReactDOM.render(
-	<Router history = {hashHistory}>{routes}</Router>,
+	<Router history={hashHistory}>{routes}</Router>,
 	document.getElementById('app')
 )
