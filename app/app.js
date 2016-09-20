@@ -1,16 +1,17 @@
 // Include the Main React Dependencies
+// import React from "react";
 import React from "react";
 import ReactDOM from "react-dom";
-
-// Grab the proeprty associated with the Router
-// var Router = require('react-router').Router
-import React , {Router} from "react-router";
+const reactRouter = require("react-router");
+const hashHistory = reactRouter.hashHistory;
+const Router = reactRouter.Router;
 
 // Grabs the Routes
-import routes "./config/routes";
+import routes from "./routes";
+import Main from "./components/Main.jsx"
 
 // Renders the contents according to the route page. 
 ReactDOM.render(
-	<Router>{routes}</Router>,
+	<Router history = {hashHistory}>{routes}</Router>,
 	document.getElementById('app')
 )
