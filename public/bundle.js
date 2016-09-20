@@ -19788,9 +19788,13 @@
 
 	var _Main2 = _interopRequireDefault(_Main);
 
+	var _Search = __webpack_require__(224);
+
+	var _Search2 = _interopRequireDefault(_Search);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// Include the Router
+	// React Router
 	var Router = __webpack_require__(161); /*
 	                                      
 	                                      		<Route path='GrandChild1' component={GrandChild1} />
@@ -19798,19 +19802,20 @@
 	                                      	<IndexRoute component={Child1} />
 	                                      */
 
-	// Inclue the React library
-	// var React = require('react');
-
 	var Route = Router.Route;
 	var IndexRoute = Router.IndexRoute;
 	// import Router, {Route, IndexRoute} from "react-router";
 
-	// Reference the high-level components
+	// Import Components
 	// var Main = require('../components/Main');
 
 
 	// Export the Routes
-	module.exports = _react2.default.createElement(Route, { path: "/", component: _Main2.default });
+	module.exports = _react2.default.createElement(
+		Route,
+		{ path: "/", component: _Main2.default },
+		_react2.default.createElement(Route, { path: "/", component: _Search2.default })
+	);
 
 /***/ },
 /* 160 */
@@ -19822,8 +19827,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Search = __webpack_require__(224);
+
+	var _Search2 = _interopRequireDefault(_Search);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// External Dependencies
 	var Main = _react2.default.createClass({
 		displayName: "Main",
 
@@ -19837,19 +19847,46 @@
 
 			return _react2.default.createElement(
 				"div",
-				{ className: "container" },
+				null,
 				_react2.default.createElement(
-					"h1",
-					null,
-					"TEST"
+					"div",
+					{ className: "page-header" },
+					_react2.default.createElement(
+						"div",
+						{ className: "container text-center" },
+						_react2.default.createElement(
+							"h1",
+							null,
+							"The New York Times Article Scrubber"
+						),
+						_react2.default.createElement(
+							"h1",
+							null,
+							_react2.default.createElement(
+								"small",
+								null,
+								"All the news that's fit to React"
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "container mainDiv" },
+					_react2.default.createElement(
+						"div",
+						{ className: "row" },
+						_react2.default.createElement(_Search2.default, null)
+					)
 				)
 			);
 		}
 	});
 
 	// Export the componen back for use in other files
-	// Include React 
-	// var React = require('react');
+
+
+	//Internal Dependencies
 	module.exports = Main;
 
 /***/ },
@@ -25503,6 +25540,69 @@
 
 	exports.default = (0, _createRouterHistory2.default)(_createHashHistory2.default);
 	module.exports = exports['default'];
+
+/***/ },
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Search = _react2.default.createClass({
+		displayName: "Search",
+
+
+		render: function render() {
+			return _react2.default.createElement(
+				"form",
+				null,
+				_react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"label",
+						{ "for": "searchTerm" },
+						"Search Term"
+					),
+					_react2.default.createElement("input", { type: "text", className: "form-control", id: "searchTerm" })
+				),
+				_react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"label",
+						{ "for": "startYear" },
+						"Start Year"
+					),
+					_react2.default.createElement("input", { type: "text", className: "form-control", id: "startYear" })
+				),
+				_react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"label",
+						{ "for": "endYear" },
+						"End Year"
+					),
+					_react2.default.createElement("input", { type: "text", className: "form-control", id: "endYear" })
+				),
+				_react2.default.createElement(
+					"button",
+					{ type: "submit", className: "btn btn-default" },
+					"Search"
+				)
+			);
+		}
+	}); /*
+	    
+	    */
+
+	module.exports = Search;
 
 /***/ }
 /******/ ]);
