@@ -9,11 +9,13 @@ const Article = React.createClass({
 	render: function(){
 		return(
 			<div>
-				<h2 className="text-center">Saved Articles</h2>
+				<h3 className="text-center articleHeadline">{this.props.headling}</h3>
 
-				<div className="resultArticlesDiv">
-					{this.props.saved}
-				</div>
+				<h5 className="articleDate">{this.props.date}</h5>
+
+				<a href={this.props.url} className="articleURL"></a>
+
+				<button type="submit" class="btn btn-default">{this.props.action}</button>
 
 			</div>
 		)

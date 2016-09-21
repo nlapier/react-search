@@ -8,7 +8,7 @@ const Search = React.createClass({
 
 	render: function(){
 		return(
-			<div>
+			<div className="row">
 				<h2 className="text-center">Search New Articles</h2>
 
 				<form>
