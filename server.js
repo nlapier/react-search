@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('public'));
 
 //Mongoose - Configure and connect to the database 
-mongoose.connect('mongodb://localhost/nytSeachDB');
+mongoose.connect('mongodb://localhost/nytSearchDB');
 
 const db = mongoose.connection;
 

@@ -28,8 +28,11 @@ const Main = React.createClass({
 
 				<div className="container mainDiv">
 					<div className="row">
+						<div className="col-sm-12" id="mainDiv">
 
-						<Search />
+							<Search />
+
+						</div>
 							
 					</div>
 				</div>
@@ -41,3 +44,16 @@ const Main = React.createClass({
 
 // Export the componen back for use in other files
 module.exports = Main;
+
+/*
+
+**Heirarchy*:***
+
+Main
+	Search
+	Results
+		article
+	Saved
+		article
+
+*/
