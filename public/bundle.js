@@ -19835,7 +19835,7 @@
 
 	var _Results2 = _interopRequireDefault(_Results);
 
-	var _Saved = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Saved.jsx\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _Saved = __webpack_require__(163);
 
 	var _Saved2 = _interopRequireDefault(_Saved);
 
@@ -19902,6 +19902,9 @@
 	module.exports = Main;
 
 	/*
+
+	**Heirarchy*:***
+
 	Main
 		Search
 		Results
@@ -19977,6 +19980,7 @@
 				)
 			);
 		}
+
 	}); /*
 	    
 	    */
@@ -20010,8 +20014,12 @@
 				),
 				_react2.default.createElement(
 					"div",
-					{ className: "resultArticlesDiv" },
-					this.props.results
+					{ className: "col-xs-12" },
+					_react2.default.createElement(
+						"div",
+						{ className: "resultArticlesDiv" },
+						this.props.results
+					)
 				)
 			);
 		}
@@ -20022,7 +20030,48 @@
 	module.exports = Results;
 
 /***/ },
-/* 163 */,
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Saved = _react2.default.createClass({
+		displayName: "Saved",
+
+
+		render: function render() {
+			return _react2.default.createElement(
+				"div",
+				{ className: "row" },
+				_react2.default.createElement(
+					"h2",
+					{ className: "text-center" },
+					"Saved Articles"
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "col-xs-12" },
+					_react2.default.createElement(
+						"div",
+						{ className: "resultArticlesDiv" },
+						this.props.saved
+					)
+				)
+			);
+		}
+	}); /*
+	    
+	    */
+
+	module.exports = Saved;
+
+/***/ },
 /* 164 */
 /***/ function(module, exports, __webpack_require__) {
 

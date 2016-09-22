@@ -6,6 +6,8 @@ import React from "react";
 
 const Search = React.createClass({
 
+
+
 	render: function(){
 		return(
 			<div className="row">
@@ -34,6 +36,7 @@ const Search = React.createClass({
 			</div>
 		)
 	}
+	
 });
 
 

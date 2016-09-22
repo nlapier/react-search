@@ -46,6 +46,9 @@ const Main = React.createClass({
 module.exports = Main;
 
 /*
+
+**Heirarchy*:***
+
 Main
 	Search
 	Results
